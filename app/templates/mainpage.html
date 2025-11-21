@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Weather Teller</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../static/style.css">
+    </head>
+    <body>
+        <div class="card">
+            <div class="searchbar">
+                <form action="/" method="post">
+                    <input type="text" placeholder="Enter city name" id="cityname" name="cityname"  spellcheck="false">
+                    <button type="submit"><img src="../static/images/icons/search.png" alt=""></button>
+                </form>
+            </div>
+            <div class="weather">
+                <!--- <img src="../static/images/icons/snow.png" class="weather-icon"> -->
+                <div class="weather_summary">
+                    <img src="{{ icon_url }}" class="weather-icon">
+                    <div class="weather_summary_2">
+                        <h3 class="city">Friday 20:40</h3> 
+                        <h1 class="temp">{{ data.weather[0].main }} {{ data.main.temp | round(0) }}°c</h1>
+                        <h2 class="city">{{ data.name }} - {{ data.sys.country }}</h2> 
+                    </div> 
+                </div>
+                <div class="details">
+                    <div class="col">
+                        <img src="../static/images/icons/humidity.png">
+                        <div>
+                        <p class="humidity">{{data.main.humidity}}%</p>
+                        <p>Humidity</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <img src="../static/images/icons/wind.png">
+                        <div>
+                        <p class="wind">{{data.wind.speed}} km/h</p>
+                        <p>Wind speed</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="" async defer></script>
+    </body>
+</html>
