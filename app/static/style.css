@@ -5,14 +5,20 @@
     box-sizing: border-box;
 }
 
+html{
+    background: url('../static/images/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+    overflow: hidden;
+}
+/*
 body{
-    /*background-color: #222;*/
     background-image: url('../static/images/background.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
-
+*/
 .card{
     width: 90%;
     max-width: 470px;
@@ -111,4 +117,21 @@ body{
 .details .col .humidity, .wind {
     font-size: 28px;
     margin-top: -6px;
+}
+
+.error{
+    margin-top: 20px;
+    background-color: rgb(23, 41, 41);
+    border-radius: 40px;
+    width: 100%;
+    height: 50px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.error p{
+    font-size: 25px;
+    font-weight: 300;
+    color: rgb(235, 234, 232);
+    text-align: center;
 }

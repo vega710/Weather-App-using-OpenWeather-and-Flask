@@ -11,17 +11,23 @@
     <body>
         <div class="card">
             <div class="searchbar">
-                <form action="/" method="post">
-                    <input type="text" placeholder="Enter city name" id="cityname" name="cityname"  spellcheck="false">
+                <form class="weather-form" action="/" method="post">
+                    <input type="text" placeholder="Enter city name" id="cityname" class="cityname" name="cityname" spellcheck="false">
                     <button type="submit"><img src="../static/images/icons/search.png" alt=""></button>
                 </form>
             </div>
+            {% if data %}
+                {% if data.error %}
+                    <div class="error">
+                        <p>{{ data.error }}</p>
+                    </div>
+                {% else %}
             <div class="weather">
                 <!--- <img src="../static/images/icons/snow.png" class="weather-icon"> -->
                 <div class="weather_summary">
                     <img src="{{ icon_url }}" class="weather-icon">
                     <div class="weather_summary_2">
-                        <h3 class="city">Friday 20:40</h3> 
+                        <h3  id="DayTime" class="city"></h3> 
                         <h1 class="temp">{{ data.weather[0].main }} {{ data.main.temp | round(0) }}°c</h1>
                         <h2 class="city">{{ data.name }} - {{ data.sys.country }}</h2> 
                     </div> 
@@ -43,7 +49,22 @@
                     </div>
                 </div>
             </div>
+                {% endif %}
+            {% endif %}    
         </div>
-        <script src="" async defer></script>
+        <script>
+            function updateDateTime(){
+                const now = new Date();
+                const options = {
+                    weekday:"long",
+                    hour:"2-digit",
+                    minute:"2-digit"
+                };
+                document.getElementById("DayTime").textContent=now.toLocaleString('en-US',options);
+            }
+            updateDateTime();
+            setInterval(updateDateTime,1000);
+
+        </script>
     </body>
 </html>
