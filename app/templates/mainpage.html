@@ -25,12 +25,27 @@
             <div class="weather">
                 <!--- <img src="../static/images/icons/snow.png" class="weather-icon"> -->
                 <div class="weather_summary">
-                    <img src="{{ icon_url }}" class="weather-icon">
-                    <div class="weather_summary_2">
-                        <h3  id="DayTime" class="city"></h3> 
-                        <h1 class="temp">{{ data.weather[0].main }} {{ data.main.temp | round(0) }}°c</h1>
-                        <h2 class="city">{{ data.name }} - {{ data.sys.country }}</h2> 
-                    </div> 
+                    <div class="row">
+                        <img src="{{ icon_url }}" class="weather-icon">
+                        <div class="weather_summary_2">
+                            <h3  id="DayTime" class="city"></h3> 
+                            <h1 class="temp">{{ data.weather[0].main }} {{ data.main.temp | round(0) }}°c</h1>
+                            <h2 class="city">{{ data.name }} - {{ data.sys.country }}</h2> 
+                        </div> 
+                    </div>
+                    <div class="description">
+                        <h3>{{ data.weather[0].description }}</h3>
+                    </div>
+                </div>
+                <div class="sunset-sunrise">   
+                    <div class="col">
+                        <img src="../static/images/icons/sunrise.png">
+                        <h2>{{ sunrise }}</h2>
+                    </div>
+                    <div class="col">
+                        <h2>{{ sunset }}</h2>
+                        <img src="../static/images/icons/sunset.png">
+                    </div>
                 </div>
                 <div class="details">
                     <div class="col">
