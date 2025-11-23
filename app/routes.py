@@ -3,7 +3,7 @@ import requests
 from flask import current_app as app
 from datetime import datetime
 #for local testing
-from local_config import OPENWEATHER_API_KEY
+#from local_config import OPENWEATHER_API_KEY
 
 main = Blueprint('main',__name__)
 
@@ -13,8 +13,8 @@ def get_weather():
     if request.method=='POST':
         city=request.form.get("cityname")
         if city:
-            api_key=OPENWEATHER_API_KEY
-            #api_key= app.config["OPENWEATHER_API_KEY"]
+            #api_key=OPENWEATHER_API_KEY
+            api_key= app.config["OPENWEATHER_API_KEY"]
             api_url=f"https://api.openweathermap.org/data/2.5/weather?q={city}&units=metric&appid={api_key}"
             response = requests.get(api_url)
             if response.status_code==200:
