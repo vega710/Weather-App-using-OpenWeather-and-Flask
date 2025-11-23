@@ -1,3 +1,49 @@
+@media (max-width: 480px) {
+    .searchbar input {
+        height: 45px;
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+    .searchbar button {
+        width: 45px;
+        height: 45px;
+    }
+
+    .weather .weather_summary .row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    }
+
+    .weather .weather_summary .weather_summary_2 {
+        text-align: center;
+    }
+
+    .weather .weather-icon {
+        width: 70px;
+        margin-bottom: 10px;
+    }
+
+    .sunset-sunrise {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+        gap: 10px;
+    }
+    .sunset-sunrise .col {
+        margin: 0;
+    }
+
+    .details {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+}
+
 
 *{
     margin: 0;
@@ -12,14 +58,6 @@ html{
     height: 100%;
     overflow-x: hidden;
 }
-/*
-body{
-    background-image: url('../static/images/background.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-*/
 
 img {
     max-width: 100%;
@@ -69,18 +107,6 @@ img {
     cursor: pointer;
 }
 
-@media (max-width: 480px) {
-    .searchbar input {
-        height: 45px;
-        font-size: 14px;
-        padding: 10px 20px;
-    }
-    .searchbar button {
-        width: 45px;
-        height: 45px;
-    }
-}
-
 .searchbar button img{
     width: 16px;
 }
@@ -97,20 +123,9 @@ img {
 
 .weather .weather_summary .row{
     display: flex;
-    flex-wrap: nowrap;
     justify-content: center;
-    text-align: center;
 }
 
-@media (max-width:480px){
-    .weather .weather_summary .row{
-    flex-wrap: wrap;
-    justify-content: center;
-    text-align: center;
-}
-
-
-}
 
 .weather .weather_summary .weather_summary_2{
     text-align: left;
@@ -123,14 +138,6 @@ img {
     width: 100px;
     /*margin-top: 30px;*/
 }
-
-@media (max-width= 480px){
-    .weather .weather-icon {
-        width: 70px;
-        margin-bottom: 10px;
-    }
-}
-
 .weather h1{
     font-size: 40px;
     font-weight: 500;
@@ -145,7 +152,6 @@ img {
 
 .weather .weather_summary .description{
     height: 40px;
-    align-items: center;
     background: rgb(23, 41, 41);
     border-radius: 50px;
     margin-top: 10px;
@@ -183,18 +189,6 @@ img {
     
 }
 
-@media (max-width: 480px) {
-    .sunset-sunrise {
-        flex-direction: column;
-        height: auto;
-        padding: 10px;
-        gap: 10px;
-    }
-    .sunset-sunrise .col {
-        margin: 0;
-    }
-}
-
 .details{
     display: flex;
     align-items: center;
@@ -219,14 +213,6 @@ img {
     margin-top: -6px;
 }
 
-@media (max-width: 480px) {
-    .details {
-        flex-direction: column;
-        text-align: center;
-        gap: 20px;
-        margin-top: 20px;
-    }
-}
 
 .error{
     margin-top: 20px;
