@@ -84,7 +84,7 @@ img {
     justify-content: space-between;
 }
 
-.searchbar input {
+.searchbar input,select {
     border: 0;
     outline: 0;
     background: #ebfffc;
@@ -96,6 +96,7 @@ img {
     margin-right: 16px;
     font-size: 18px;
 }
+
 
 .searchbar button{
     border: 0;
