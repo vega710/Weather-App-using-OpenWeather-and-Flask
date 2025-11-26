@@ -13,7 +13,7 @@ def get_weather():
     if request.method=='POST':
         city=request.form.get("cityname")
         if city:
-            api_key=OPENWEATHER_API_KEY
+            #api_key=OPENWEATHER_API_KEY
             api_key= app.config["OPENWEATHER_API_KEY"]
             #api_url=f"https://api.openweathermap.org/data/2.5/weather?q={city}&units=metric&appid={api_key}"
             response = requests.get(api_url)
