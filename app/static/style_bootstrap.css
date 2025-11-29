@@ -27,21 +27,22 @@ body{
 
 .weather-summary{
     background-color: rgb(12, 21, 25,0.6);
-    border-radius: 50px;
+    /*border-radius: 50px;*/
 }
 
+
 .weather-description{
-    width: 80%;
+    width: 100%;
     /*background-color: rgb(23, 41, 41);*/
     background-color: rgb(22, 33, 39);
-    border-radius: 50px;
+    /*border-radius: 50px;*/
 }
 
 .weather-details{
     color: white;
     /*background-color: rgb(23, 41, 41,0.5);*/
     background-color: rgb(12, 21, 25,0.6);
-    border-radius: 50px;
+    /*border-radius: 50px;*/
 }
 
 .weather-details div{

@@ -10,10 +10,10 @@
         <link rel="stylesheet" href="../static/style_bootstrap.css">
     </head>
     <body>
-        <div class="container p-4" style="max-width: 800px;">
+        <div class="container p-4" style="max-width: 700px;">
             <div class="card shadow-lg p-4 mx-auto search-bar" style="max-width: 600px;">
                 <div class="row text-center">
-                    <h1>Atlas Weather</h1>
+                    <h2>Atlas Weather</h2>
                 </div>
                 <div class="m-3">
                     <form class="d-flex gap-3" action="/" method="post">
@@ -92,63 +92,66 @@
 
             <div class="m-3">
                 <!--- <img src="../static/images/icons/snow.png" class="weather-icon"> -->
-                <div class="row p-3 align-items-center justify-content-center weather-summary">
-                    <img src="{{ icon_url }}" class="img-fluid" style="max-width: 130px;">
-                    <div class="col-12 col-md-8 ">
-                        <div class="col-12 col-md-12">
-                            <h4  id="DayTime" class="fw-semibold"></h4> 
-                            <h1 class="fw-bold">{{ data.weather[0].main }} {{ data.main.temp | round(0) }}°c</h1>
-                            <h3>{{ data.name }} - {{ data.sys.country }}</h3> 
-                        </div> 
-                    </div>
-                    <div class="text-center p-1 mt-2 weather-description">
-                        <h3 class="text-capitalize">{{ data.weather[0].description }}</h3>
+                <div class="row p-3 g-2 align-items-center justify-content-center weather-summary rounded-4">
+                    <img src="{{ icon_url }}" class="img-fluid col-12 col-md-4" style="max-width: 130px;">
+                            <div class="col-8 col-md-5">
+                                <div class="col-12 col-md-12">
+                                    <h6  id="DayTime" class="fw-semibold"></h6> 
+                                    <h3 class="fw-bold">{{ data.weather[0].main }}</h3>
+                                    <h5>{{ data.name }} - {{ data.sys.country }}</h5> 
+                                </div> 
+                            </div>
+                            <div class="col-4 col-md-3 weather-number">
+                                <h1 class="fw-bold">{{ data.main.temp }}°c</h1>
+                            </div>
+                    <div class="text-center justify-content-center mt-2 weather-description rounded-4">
+                        <h5 class="align-items-center">{{ data.weather[0].description }}</h5>
                     </div>
                 </div>
 
-                <div class="row p-3 g-3 justify-content-center mt-3 align-items-center weather-details">
+                <div class="row p-3 g-2 justify-content-center mt-3 align-items-center weather-details rounded-4">
                     <div class="col-12 col-md-6">
-                        <div class="card stat-card py-1 px-5">
+                        <div class="card stat-card py-1 px-3 rounded-4 d-flex flex-row flex-md-column align-items-center justify-content-between">
                             <div>
-                                <img src="../static/images/icons/sunrise.png" class="img-fluid" width="45">
+                                <img src="../static/images/icons/sunrise.png" class="img-fluid" width="25">
                             </div>
                             <div>
-                                <h5 class="stat fs-5 fw-bold mt-2">{{ sunrise }}</h5>
+                                <h5 class="stat fs-5 fw-bold mt-1">{{ sunrise }}</h5>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-12 col-md-6">
-                        <div class="card stat-card py-1 px-5">
+                        <div class="card stat-card py-1 px-3 rounded-4 d-flex flex-row flex-md-column align-items-center justify-content-between">
                             <div>
-                                <img src="../static/images/icons/sunset.png" class="img-fluid" width="45">
+                                <img src="../static/images/icons/sunset.png" class="img-fluid" width="25">
                             </div>
                             <div>
-                                <h5 class="stat fs-5 fw-bold mt-2">{{ sunset }}</h5>
+                                <h5 class="stat fs-5 fw-bold mt-1">{{ sunset }}</h5>
                             </div>
                         </div>
                     </div> 
 
                     <div class="col-12 col-md-6">
-                        <div class="card stat-card py-1 px-5">
+                        <div class="card stat-card py-1 px-3 rounded-4 d-flex flex-row flex-md-column align-items-center justify-content-between">
                             <div class="d-flex">
-                                <div class="fs-4 fw-semibold">Humidity</div>
+                                <div class="fs-6 fw-semibold">Humidity</div>
                                 <!--<img src="../static/images/icons/humidity.png" width="40">-->
                             </div>
                             <div>
-                                <p class="stat fs-5 fw-bold">{{data.main.humidity}}%</p>
+                                <h5 class="stat fs-5 fw-bold">{{data.main.humidity}}%</h5>
                             </div>
                         </div>
                     </div> 
 
                     <div class="col-12 col-md-6">
-                        <div class="card stat-card py-1 px-5">
+                        <div class="card stat-card py-1 px-3 rounded-4 d-flex flex-row flex-md-column align-items-center justify-content-between">
                             <div class="d-flex">
-                                <div class="fs-4 fw-semibold">Wind speed</div>
+                                <div class="fs-6 fw-semibold">Wind speed</div>
                                 <!--<img src="../static/images/icons/wind.png" width="40">-->
                             </div>
                             <div>
-                                <p class="stat fs-5 fw-bold">{{data.wind.speed}} km/h</p>
+                                <h5 class="stat fs-5 fw-bold">{{data.wind.speed}} km/h</h5>
                             </div>
                         </div>
                     </div> 
