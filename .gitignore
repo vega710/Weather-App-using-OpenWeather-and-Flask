@@ -12,3 +12,7 @@ venv/
 
 # IDE files
 .vscode/
+
+mainpage_2.html
+mainpage_oldversion.html
+style.css
